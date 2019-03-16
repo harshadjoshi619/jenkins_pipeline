@@ -1,4 +1,3 @@
-node('SlaveOne') {
  pipeline {
     agent any
 
@@ -31,7 +30,7 @@ node('SlaveOne') {
         }
     }
 }
-}
+
 
 
 
