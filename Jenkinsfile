@@ -1,4 +1,4 @@
-node('master') {
+node('SlaveOne') {
  pipeline {
     agent any
 
