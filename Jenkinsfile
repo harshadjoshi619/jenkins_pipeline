@@ -19,6 +19,15 @@
                 }
             }
         }
+     
+     stage ('sonarqube analysis'){
+      
+      def mvnHome = tool name: 'maven3', type: 'maven'
+      withSonarQubeEnv('sonarone'){
+       sh "${mvnHome}/bin/mvn sonar:sonar"
+      }
+     }
+      
 
 
         stage ('Deployment Stage') {
